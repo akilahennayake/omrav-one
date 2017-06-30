@@ -15,22 +15,22 @@ class CreateOmraTravelagencyTable extends Migration
     {
         Schema::create('omra_travelagency', function (Blueprint $table) {
             $table->increments('t_id')->unique()->index()->unsigned();
-            $table->string('t_countryregistrationnumber');
-            $table->string('t_name');
-            $table->integer('t_telephone')->unsigned();
+            $table->string('t_countryregistrationnumber',100)->nullable();
+            $table->string('t_name',100)->nullable();
+            $table->integer('t_telephone')->unsigned()->nullable();
             $table->integer('t_faxnumber')->unsigned()->nullable();
             $table->string('t_email')->unique();
-            $table->string('t_password');
-            $table->string('t_ownerpassportnumber');
-            $table->string('t_owneridphotopath');
-            $table->string('t_building');
-            $table->string('t_logophotopath');
-            $table->integer('country_id');
+            $table->string('t_password',16);
+            $table->string('t_ownerpassportnumber',20)->nullable();
+            $table->string('t_owneridphotopath')->nullable();
+            $table->string('t_building',50)->nullable();
+            $table->string('t_logophotopath')->nullable();
+            $table->integer('country_id')->unsigned();
             $table->foreign('country_id')->references('c_id')->on('omra_country');
-            $table->integer('role_id')->default(1);
+            $table->integer('role_id')->unsigned()->default(2);
             $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('t_isactive')->default(false);
-            $table->string('t_city');
+            $table->string('t_city',50)->nullable();
 
             $table->timestamps();
         });

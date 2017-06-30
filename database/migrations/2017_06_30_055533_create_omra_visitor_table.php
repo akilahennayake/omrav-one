@@ -14,21 +14,21 @@ class CreateOmraVisitorTable extends Migration
     public function up()
     {
         Schema::create('omra_visitor', function (Blueprint $table) {
-            $table->increments('v_id')->unique()->index()->unsigned();
+            $table->increments('v_id')->index()->unsigned();
             $table->string('v_email')->unique();
-            $table->string('v_fname');
-            $table->string('v-lname');
-            $table->date('v_dob');
-            $table->string('v_residentcity');
+            $table->string('v_fname',50)->nullable();
+            $table->string('v-lname',50)->nullable();
+            $table->date('v_dob')->nullable();
+            $table->string('v_residentcity',50)->nullable();
             $table->integer('v_mobile')->unsigned();
-            $table->integer('v_homephone')->unsigned();
-            $table->string('v_profilephotopath');
-            $table->string('password');
-            $table->integer('nationality_id');
+            $table->integer('v_homephone')->unsigned()->nullable();
+            $table->string('v_profilephotopath')->nullable();
+            $table->string('password',16);
+            $table->integer('nationality_id')->unsigned();
             $table->foreign('nationality_id')->references('n_id')->on('omra_nationality');
-            $table->integer('gender_id');
+            $table->integer('gender_id')->unsigned()->nullable();
             $table->foreign('gender_id')->references('g_id')->on('omra_gender');
-            $table->integer('country_id');
+            $table->integer('country_id')->unsigned();
             $table->foreign('country_id')->references('c_id')->on('omra_country');
             $table->timestamps();
         });

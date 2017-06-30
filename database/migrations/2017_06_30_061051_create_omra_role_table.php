@@ -14,7 +14,8 @@ class CreateOmraRoleTable extends Migration
     public function up()
     {
         Schema::create('omra_role', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('r_id')->unsigned();
+            $table->string('r_role',30);
             $table->timestamps();
         });
     }

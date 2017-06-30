@@ -15,12 +15,14 @@ class CreateOmraTravelagencyemployeeTable extends Migration
     {
         Schema::create('omra_travelagencyemployee', function (Blueprint $table) {
             $table->increments('te_id')->unsigned();
-            $table->string('te_fname');
-            $table->string('te_lname');
+            $table->string('te_fname',30)->nullable();
+            $table->string('te_lname',30)->nullable();
             $table->string('te_email')->unique();
-            $table->string('te_password');
+            $table->string('te_password',16);
+            $table->integer('role_id')->unsigned()->default(3);
+            $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('te_isactive')->default(false);
-            $table->integer('travelagency_id');
+            $table->integer('travelagency_id')->unsigned();
             $table->foreign('travelagency_id')->references('t_id')->on('omra_travelagency');
             $table->timestamps();
         });
