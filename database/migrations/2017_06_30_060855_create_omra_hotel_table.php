@@ -16,16 +16,19 @@ class CreateOmraHotelTable extends Migration
         Schema::create('omra_hotel', function (Blueprint $table) {
             $table->increments('h_id')->unsigned();
             $table->string('h_hotelname',100)->nullable();
+            $table->string('h_registerednumberincountry',100)->nullable();
             $table->integer('h_telephone')->nullable();
             $table->string('h_email')->unique();
             $table->string('h_password',16);
             $table->integer('h_distancetoharam')->unsigned()->nullable();
-            $table->integer('h_distancetonearestgate')->unsigned()->nullable();
-            $table->string('h_hotelphotopath')->nullable();
+            $table->string('h_nearestgatename',80)->unsigned()->nullable();
+            $table->string('h_hotellogophotopath')->nullable();
             $table->integer('h_faxnumber')->unsigned()->nullable();
             $table->integer('role_id')->unsigned()->default(4);
             $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('h_isactive')->default(false);
+            $table->integer('hotel_profit_id')->unsigned()->nullable();
+            $table->foreign('hotel_profit_id')->references('hp_id')->on('omra_hotelprofit');
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')->references('ct_id')->on('omra_city');
             $table->integer('starrating_id')->unsigned();

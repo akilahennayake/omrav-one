@@ -14,7 +14,8 @@ class CreateOmraCityTable extends Migration
     public function up()
     {
         Schema::create('omra_city', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('ct_id')->unsigned();
+            $table->string('ct_name')->nullable();
             $table->timestamps();
         });
     }

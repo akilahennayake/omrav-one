@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOmraFloortypeTable extends Migration
+class CreateOmraRoomtypenameTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateOmraFloortypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_floortype', function (Blueprint $table) {
-            $table->increments('fl_id')->unsigned();
-            $table->string('fl_flooring')->nullable();
+        Schema::create('omra_roomtypename', function (Blueprint $table) {
+            $table->increments('rmtn_id')->unsigned();
+            $table->string('rmtn_roomtypename');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateOmraFloortypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('omra_floortype');
+        Schema::dropIfExists('omra_roomtypename');
     }
 }
