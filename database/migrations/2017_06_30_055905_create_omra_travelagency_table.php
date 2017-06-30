@@ -25,8 +25,10 @@ class CreateOmraTravelagencyTable extends Migration
             $table->string('t_owneridphotopath');
             $table->string('t_building');
             $table->string('t_logophotopath');
+            $table->integer('country_id');
             $table->foreign('country_id')->references('c_id')->on('omra_country');
-            $table->foreign('role_id')->references('r_id')->on('omra_role')->default(1);
+            $table->integer('role_id')->default(1);
+            $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('t_isactive')->default(false);
             $table->string('t_city');
 
