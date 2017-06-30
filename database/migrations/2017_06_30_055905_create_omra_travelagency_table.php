@@ -14,7 +14,21 @@ class CreateOmraTravelagencyTable extends Migration
     public function up()
     {
         Schema::create('omra_travelagency', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('t_id')->unique()->index()->unsigned();
+            $table->string('t_countryregistrationnumber');
+            $table->string('t_name');
+            $table->integer('t_telephone')->unsigned();
+            $table->integer('t_faxnumber')->unsigned()->nullable();
+            $table->string('t_email')->unique();
+            $table->string('t_password');
+            $table->string('t_ownerpassportnumber');
+            $table->string('t_owneridphotopath');
+            $table->string('t_building');
+            $table->string('t_logophotopath');
+            $table->foreign('country_id')->references('c_id')->on('omra_country');
+            $table->foreign('role_id')->references('r_id')->on('omra_role')->default(1);
+            $table->string('t_city');
+
             $table->timestamps();
         });
     }

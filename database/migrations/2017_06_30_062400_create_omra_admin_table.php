@@ -15,6 +15,7 @@ class CreateOmraAdminTable extends Migration
     {
         Schema::create('omra_admin', function (Blueprint $table) {
             $table->increments('id');
+
             $table->timestamps();
         });
     }
