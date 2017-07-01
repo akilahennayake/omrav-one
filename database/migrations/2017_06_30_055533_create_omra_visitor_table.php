@@ -24,12 +24,12 @@ class CreateOmraVisitorTable extends Migration
             $table->integer('v_homephone')->unsigned()->nullable();
             $table->string('v_profilephotopath')->nullable();
             $table->string('password');
-            $table->integer('nationality_id')->unsigned();
-            $table->foreign('nationality_id')->references('n_id')->on('omra_nationality');
-            $table->integer('gender_id')->unsigned()->nullable();
-            $table->foreign('gender_id')->references('g_id')->on('omra_gender');
-            $table->integer('country_id')->unsigned();
-            $table->foreign('country_id')->references('c_id')->on('omra_country');
+//            $table->integer('nationality_id')->unsigned();
+//            $table->foreign('nationality_id')->references('n_id')->on('omra_nationality');
+//            $table->integer('gender_id')->unsigned()->nullable();
+//            $table->foreign('gender_id')->references('g_id')->on('omra_gender');
+//            $table->integer('country_id')->unsigned();
+//            $table->foreign('country_id')->references('c_id')->on('omra_country');
             $table->timestamps();
         });
     }
