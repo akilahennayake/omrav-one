@@ -35,8 +35,8 @@ class CreateOmraRoomtypeTable extends Migration
             $table->foreign('promotion_id')->references('pr_id')->on('omra_promotion');
             $table->integer('plan_id')->unsigned()->nullable();
             $table->foreign('plan_id')->references('pl_id')->on('omra_plan');
-            $table->integer('roomphotopath_id')->unsigned()->nullable();
-            $table->foreign('roomphotopath_id')->references('rmph_id')->on('omra_roomphoto');
+//            $table->integer('roomphotopath_id')->unsigned()->nullable();
+//            $table->foreign('roomphotopath_id')->references('rmph_id')->on('omra_roomphoto');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class CreateOmraVisitorstatusTable extends Migration
     public function up()
     {
         Schema::create('omra_visitorstatus', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('vs_id')->unsigned();
+            $table->string('vs_visitorstatus',50)->nullable();
             $table->timestamps();
         });
     }

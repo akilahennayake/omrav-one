@@ -23,7 +23,7 @@ class CreateOmraVisitorTable extends Migration
             $table->integer('v_mobile')->unsigned();
             $table->integer('v_homephone')->unsigned()->nullable();
             $table->string('v_profilephotopath')->nullable();
-            $table->string('password',16);
+            $table->string('password');
             $table->integer('nationality_id')->unsigned();
             $table->foreign('nationality_id')->references('n_id')->on('omra_nationality');
             $table->integer('gender_id')->unsigned()->nullable();

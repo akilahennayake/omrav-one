@@ -14,7 +14,8 @@ class CreateOmraStarratingTable extends Migration
     public function up()
     {
         Schema::create('omra_starrating', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('st_id')->unsigned();
+            $table->string('st_rating')->nullable();
             $table->timestamps();
         });
     }

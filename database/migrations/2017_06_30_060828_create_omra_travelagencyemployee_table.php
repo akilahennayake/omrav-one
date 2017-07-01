@@ -18,7 +18,7 @@ class CreateOmraTravelagencyemployeeTable extends Migration
             $table->string('te_fname',30)->nullable();
             $table->string('te_lname',30)->nullable();
             $table->string('te_email')->unique();
-            $table->string('te_password',16);
+            $table->string('te_password');
             $table->integer('role_id')->unsigned()->default(3);
             $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('te_isactive')->default(false);

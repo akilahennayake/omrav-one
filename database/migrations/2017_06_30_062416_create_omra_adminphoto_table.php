@@ -14,7 +14,8 @@ class CreateOmraAdminphotoTable extends Migration
     public function up()
     {
         Schema::create('omra_adminphoto', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('adminphoto_id')->unsigned();
+            $table->string('admin_photopath')->nullable();
             $table->timestamps();
         });
     }

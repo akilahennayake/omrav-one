@@ -14,7 +14,8 @@ class CreateOmraBedtypeTable extends Migration
     public function up()
     {
         Schema::create('omra_bedtype', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('bdt_id')->unsigned();
+            $table->string('bdt_bedtype',50)->nullable();
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ class CreateOmraHotelTable extends Migration
             $table->string('h_registerednumberincountry',100)->nullable();
             $table->integer('h_telephone')->nullable();
             $table->string('h_email')->unique();
-            $table->string('h_password',16);
+            $table->string('h_password');
             $table->integer('h_distancetoharam')->unsigned()->nullable();
             $table->string('h_nearestgatename',80)->unsigned()->nullable();
             $table->string('h_hotellogophotopath')->nullable();

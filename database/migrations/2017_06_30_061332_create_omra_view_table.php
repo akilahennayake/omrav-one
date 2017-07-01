@@ -14,7 +14,8 @@ class CreateOmraViewTable extends Migration
     public function up()
     {
         Schema::create('omra_view', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('vw_id')->unsigned();
+            $table->string('vw_viewtype',50)->nullable();
             $table->timestamps();
         });
     }

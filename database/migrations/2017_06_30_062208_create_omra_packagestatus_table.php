@@ -14,7 +14,8 @@ class CreateOmraPackagestatusTable extends Migration
     public function up()
     {
         Schema::create('omra_packagestatus', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('pkgstatus_id')->unsigned();
+            $table->string('pkgstatus_status',50)->nullable();
             $table->timestamps();
         });
     }

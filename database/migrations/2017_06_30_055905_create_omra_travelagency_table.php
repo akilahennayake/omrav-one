@@ -20,7 +20,7 @@ class CreateOmraTravelagencyTable extends Migration
             $table->integer('t_telephone')->unsigned()->nullable();
             $table->integer('t_faxnumber')->unsigned()->nullable();
             $table->string('t_email')->unique();
-            $table->string('t_password',16);
+            $table->string('t_password');
             $table->string('t_ownerpassportnumber',20)->nullable();
             $table->string('t_owneridphotopath')->nullable();
             $table->string('t_building',50)->nullable();
