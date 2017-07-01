@@ -17,8 +17,8 @@ class CreateOmraPlanTable extends Migration
             $table->increments('pl_ id');
             $table->integer('hotel_id')->unsigned()->nullable();
             $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
-//            $table->integer('bookingwindow_id')->unsigned()->nullable();
-//            $table->foreign('bookingwindow_id')->references('bkw_bookingwindowid')->on('omra_bookingwindow');
+            $table->integer('bookingwindow_id')->unsigned()->nullable();
+            $table->foreign('bookingwindow_id')->references('bkw_bookingwindowid')->on('omra_bookingwindow');
             $table->integer('roomtype_id')->unsigned()->nullable();
             $table->foreign('roomtype_id')->references('rmt_id')->on('omra_roomtype');
             $table->double('pl_baseprice')->nullable();

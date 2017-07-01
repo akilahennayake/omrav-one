@@ -19,10 +19,10 @@ class CreateOmraHotelemployeeTable extends Migration
             $table->string('he_lname',30)->nullable();
             $table->string('he_email')->unique();
             $table->string('he_password');
-//            $table->integer('role_id')->unsigned()->default(5);
-//            $table->foreign('role_id')->references('r_id')->on('omra_role');
+            $table->integer('role_id')->unsigned()->default(5);
+            $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('isactive')->default(false);
-            $table->integer('hotel_id')->unsigned();
+            $table->integer('hotel_id')->unsigned()->nullable();
             $table->foreign('hotel_id')->references('h_id')->on('omra_hotel)');
             $table->timestamps();
         });

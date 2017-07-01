@@ -25,14 +25,14 @@ class CreateOmraTravelagencyTable extends Migration
             $table->string('t_owneridphotopath')->nullable();
             $table->string('t_building',50)->nullable();
             $table->string('t_logophotopath')->nullable();
-//            $table->integer('country_id')->unsigned();
-//            $table->foreign('country_id')->references('c_id')->on('omra_country');
-//            $table->integer('role_id')->unsigned()->default(2);
-//            $table->foreign('role_id')->references('r_id')->on('omra_role');
+            $table->integer('country_id')->unsigned();
+            $table->foreign('country_id')->references('c_id')->on('omra_country');
+            $table->integer('role_id')->unsigned()->default(2);
+            $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('t_isactive')->default(false);
             $table->string('t_city',50)->nullable();
-//            $table->integer('ta_profit_id')->unsigned()->nullable();
-//            $table->foreign('ta_profit_id')->references('tap_id')->on('omra_travelagencyprofit');
+            $table->integer('ta_profit_id')->unsigned()->nullable();
+            $table->foreign('ta_profit_id')->references('tap_id')->on('omra_travelagencyprofit');
             $table->timestamps();
         });
     }

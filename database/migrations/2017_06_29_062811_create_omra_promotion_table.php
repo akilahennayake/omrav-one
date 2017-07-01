@@ -16,8 +16,8 @@ class CreateOmraPromotionTable extends Migration
         Schema::create('omra_promotion', function (Blueprint $table) {
             $table->increments('promo_autoid')->unsigned();
             $table->integer('pr_id')->unsigned();
-//            $table->integer('promotiontype_id')->unsigned()->nullable();
-//            $table->foreign('promotiontype_id')->references('prot_promotiontypeid')->on('omra_promotiontype');
+            $table->integer('promotiontype_id')->unsigned()->nullable();
+            $table->foreign('promotiontype_id')->references('prot_promotiontypeid')->on('omra_promotiontype');
             $table->integer('hotel_id')->unsigned()->nullable();
             $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
             $table->double('pr_baseprice')->nullable();
