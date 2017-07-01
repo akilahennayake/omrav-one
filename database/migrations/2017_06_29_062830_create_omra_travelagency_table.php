@@ -31,8 +31,8 @@ class CreateOmraTravelagencyTable extends Migration
             $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('t_isactive')->default(false);
             $table->string('t_city',50)->nullable();
-            $table->integer('ta_profit_id')->unsigned()->nullable();
-            $table->foreign('ta_profit_id')->references('tap_id')->on('omra_travelagencyprofit');
+//            $table->integer('ta_profit_id')->unsigned()->nullable();
+//            $table->foreign('ta_profit_id')->references('tap_id')->on('omra_travelagencyprofit');
             $table->timestamps();
         });
     }

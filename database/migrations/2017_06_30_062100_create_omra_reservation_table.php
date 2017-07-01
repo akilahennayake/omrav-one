@@ -26,7 +26,7 @@ class CreateOmraReservationTable extends Migration
             $table->integer('visitorvisastatus_id')->unsigned()->nullable();
             $table->foreign('visitorvisastatus_id')->references('vvs_id')->on('omra_visastatus');
             $table->integer('reservationstatus_id')->unsigned()->nullable();
-            $table->foreign('reservationstatus_id')->references('rest_id')->on('omra_visitor');
+            $table->foreign('reservationstatus_id')->references('rest_id')->on('omra_reservationstatus');
             $table->timestamps();
         });
     }

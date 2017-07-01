@@ -14,7 +14,7 @@ class CreateOmraPlanTable extends Migration
     public function up()
     {
         Schema::create('omra_plan', function (Blueprint $table) {
-            $table->increments('pl_ id');
+            $table->increments('pl_id');
             $table->integer('hotel_id')->unsigned()->nullable();
             $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
             $table->integer('bookingwindow_id')->unsigned()->nullable();

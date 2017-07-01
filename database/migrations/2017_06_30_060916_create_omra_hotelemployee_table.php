@@ -23,7 +23,7 @@ class CreateOmraHotelemployeeTable extends Migration
             $table->foreign('role_id')->references('r_id')->on('omra_role');
             $table->boolean('isactive')->default(false);
             $table->integer('hotel_id')->unsigned()->nullable();
-            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel)');
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
             $table->timestamps();
         });
     }

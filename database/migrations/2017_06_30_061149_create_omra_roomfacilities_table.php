@@ -16,7 +16,7 @@ class CreateOmraRoomfacilitiesTable extends Migration
         Schema::create('omra_roomfacilities', function (Blueprint $table) {
             $table->increments('rf_id')->unsigned();
             $table->integer('roomtype_id')->unsigned()->nullable();
-            $table->foreign('roomtype_id')->references('rt_id')->on('omra_roomtype');
+            $table->foreign('roomtype_id')->references('rmt_id')->on('omra_roomtype');
             $table->boolean('rf_locker')->default(false)->nullable();
             $table->boolean('rf_snackbar')->default(false)->nullable();
             $table->boolean('rf_tv')->default(false)->nullable();
@@ -31,8 +31,12 @@ class CreateOmraRoomfacilitiesTable extends Migration
             $table->boolean('rf_cotforchildren')->default(false)->nullable();
             $table->boolean('rf_clothesrack')->default(false)->nullable();
             $table->boolean('rf_wardrobe')->default(false)->nullable();
-            $table->integer('floortype_id')->nullable();
+
+            $table->integer('floortype_id')->unsigned()->nullable();
             $table->foreign('floortype_id')->references('fl_id')->on('omra_floortype');
+//            $table->integer('hotel_id')->unsigned()->nullable();
+//            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
+
             $table->boolean('rf_clothesiron')->default(false)->nullable();
             $table->boolean('rf_privateentrance')->default(false)->nullable();
             $table->boolean('rf_sofa')->default(false)->nullable();
@@ -52,7 +56,7 @@ class CreateOmraRoomfacilitiesTable extends Migration
             $table->boolean('rf_diningtable')->default(false)->nullable();
             $table->boolean('rf_coffeemaker')->default(false)->nullable();
             $table->boolean('rf_towels')->default(false)->nullable();
-            $table->integer('viewtype_id')->unsigned();
+            $table->integer('viewtype_id')->unsigned()->nullable();
             $table->foreign('viewtype_id')->references('vw_id')->on('omra_view');
             $table->timestamps();
         });

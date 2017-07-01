@@ -31,10 +31,10 @@ class CreateOmraRoomtypeTable extends Migration
             $table->boolean('rmt_wakeupserviceavailable')->default(true);
             $table->time('rmt_checkintime')->nullable();
             $table->time('rmt_checkouttime')->nullable();
-            $table->integer('promotion_id')->unsigned()->nullable();
-            $table->foreign('promotion_id')->references('pr_id')->on('omra_promotion');
-            $table->integer('plan_id')->unsigned()->nullable();
-            $table->foreign('plan_id')->references('pl_id')->on('omra_plan');
+//            $table->integer('promotion_id')->unsigned()->nullable();
+//            $table->foreign('promotion_id')->references('pr_id')->on('omra_promotion');
+//            $table->integer('plan_id')->unsigned()->nullable();
+//            $table->foreign('plan_id')->references('pl_id')->on('omra_plan');
 
 
 //            $table->integer('roomphotopath_id')->unsigned()->nullable();

@@ -44,8 +44,8 @@ class CreateOmraPackageTable extends Migration
             $table->foreign('packagestatus_id')->references('pkgstatus_id')->on('omra_packagestatus');
             $table->integer('plan_id')->unsigned()->nullable();
             $table->foreign('plan_id')->references('pl_id')->on('omra_plan');
-            $table->integer('payment_id')->unsigned()->nullable();
-            $table->foreign('payment_id')->references('py_paymentid')->on('omra_payments');
+//            $table->integer('payment_id')->unsigned()->nullable();
+//            $table->foreign('payment_id')->references('py_paymentid')->on('omra_payments');
             $table->timestamps();
         });
     }

@@ -18,8 +18,6 @@ class CreateOmraPromotionTable extends Migration
             $table->integer('pr_id')->unsigned();
             $table->integer('promotiontype_id')->unsigned()->nullable();
             $table->foreign('promotiontype_id')->references('prot_promotiontypeid')->on('omra_promotiontype');
-            $table->integer('hotel_id')->unsigned()->nullable();
-            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
             $table->double('pr_baseprice')->nullable();
             $table->double('pr_bnbprice')->nullable();
             $table->double('pr_hbprice')->nullable();
@@ -28,6 +26,8 @@ class CreateOmraPromotionTable extends Migration
             $table->date('pr_enddate')->nullable();
             $table->integer('roomtype_id')->unsigned()->nullable();
             $table->foreign('roomtype_id')->references('rmt_id')->on('omra_roomtype');
+            $table->integer('hotel_id')->unsigned()->nullable();
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
             $table->timestamps();
         });
     }
