@@ -14,7 +14,8 @@ class CreateOmraVisastatusesTable extends Migration
     public function up()
     {
         Schema::create('omra_visastatuses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('vvs_id')->unsigned();
+            $table->string('vvs_visastatus',50)->nullable();
             $table->timestamps();
         });
     }

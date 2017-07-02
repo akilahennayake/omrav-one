@@ -14,7 +14,8 @@ class CreateOmraReservationstatusesTable extends Migration
     public function up()
     {
         Schema::create('omra_reservationstatuses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('rest_id')->unsigned();
+            $table->string('rest_reservationstatus',50)->nullable();
             $table->timestamps();
         });
     }

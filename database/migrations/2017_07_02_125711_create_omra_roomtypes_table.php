@@ -14,7 +14,31 @@ class CreateOmraRoomtypesTable extends Migration
     public function up()
     {
         Schema::create('omra_roomtypes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('rmt_id')->unsigned();
+            $table->integer('hotel_id')->unsigned()->nullable();
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
+            $table->string('rmt_name',100)->nullable();
+            $table->integer('rmt_numberofrooms')->nullable();
+            $table->integer('rmt_roomsize')->nullable();
+            $table->integer('bedtype_id')->unsigned()->nullable();
+            $table->foreign('bedtype_id')->references('bdt_id')->on('omra_bedtypes');
+            $table->integer('rmt_maxoccupancy')->nullable();
+            $table->integer('roomtypename_id')->nullable()->unsigned();
+            $table->foreign('roomtypename_id')->references('rmtn_id')->on('omra_roomtypenames');
+            $table->boolean('rmt_availability')->default(true);
+            $table->boolean('rmt_smokingallowed')->default(false);
+            $table->boolean('rmt_childrenallowed')->default(true);
+            $table->boolean('rmt_wakeupserviceavailable')->default(true);
+            $table->time('rmt_checkintime')->nullable();
+            $table->time('rmt_checkouttime')->nullable();
+//            $table->integer('promotion_id')->unsigned()->nullable();
+//            $table->foreign('promotion_id')->references('pr_id')->on('omra_promotion');
+//            $table->integer('plan_id')->unsigned()->nullable();
+//            $table->foreign('plan_id')->references('pl_id')->on('omra_plan');
+
+
+//            $table->integer('roomphotopath_id')->unsigned()->nullable();
+//            $table->foreign('roomphotopath_id')->references('rmph_id')->on('omra_roomphoto');
             $table->timestamps();
         });
     }

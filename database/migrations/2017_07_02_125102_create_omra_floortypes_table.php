@@ -14,7 +14,8 @@ class CreateOmraFloortypesTable extends Migration
     public function up()
     {
         Schema::create('omra_floortypes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('fl_id')->unsigned();
+            $table->string('fl_flooring')->nullable();
             $table->timestamps();
         });
     }

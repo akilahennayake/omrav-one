@@ -14,7 +14,8 @@ class CreateOmraPromotiontypesTable extends Migration
     public function up()
     {
         Schema::create('omra_promotiontypes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('prot_promotiontypeid')->unsigned();
+            $table->string('prot_type',60)->nullable();
             $table->timestamps();
         });
     }

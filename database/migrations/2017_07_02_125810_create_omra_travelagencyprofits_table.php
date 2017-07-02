@@ -14,7 +14,13 @@ class CreateOmraTravelagencyprofitsTable extends Migration
     public function up()
     {
         Schema::create('omra_travelagencyprofits', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('tap_id')->unsigned();
+            $table->integer('travelagency_id')->unsigned()->nullable();
+            $table->foreign('travelagency_id')->references('t_id')->on('omra_travelagencies');
+            $table->integer('profitentity_id')->unsigned()->nullable();
+            $table->foreign('profitentity_id')->references('prof_id')->on('omra_adminprofitmatrices');
+            $table->double('tap_profitamount')->nullable();
+
             $table->timestamps();
         });
     }

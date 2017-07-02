@@ -14,7 +14,10 @@ class CreateOmraHotelphotosTable extends Migration
     public function up()
     {
         Schema::create('omra_hotelphotos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('hph_id')->unsigned();
+            $table->string('hph_path');
+            $table->integer('hotel_id')->unsigned()->nullable();
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
             $table->timestamps();
         });
     }

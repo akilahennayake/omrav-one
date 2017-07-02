@@ -14,7 +14,10 @@ class CreateOmraAdminprofitmatricesTable extends Migration
     public function up()
     {
         Schema::create('omra_adminprofitmatrices', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('prof_id')->unsigned();
+            $table->string('prof_entityname')->nullable();
+            $table->double('prof_globalprofitamount')->nullable();
+            $table->double('prof_cardpercentage')->nullable();
             $table->timestamps();
         });
     }

@@ -14,7 +14,16 @@ class CreateOmraHotelemployeesTable extends Migration
     public function up()
     {
         Schema::create('omra_hotelemployees', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('he_id')->unsigned();
+            $table->string('he_fname',30)->nullable();
+            $table->string('he_lname',30)->nullable();
+            $table->string('he_email')->unique();
+            $table->string('he_password');
+            $table->integer('role_id')->unsigned()->default(5);
+            $table->foreign('role_id')->references('r_id')->on('omra_roles');
+            $table->boolean('isactive')->default(false);
+            $table->integer('hotel_id')->unsigned()->nullable();
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
             $table->timestamps();
         });
     }

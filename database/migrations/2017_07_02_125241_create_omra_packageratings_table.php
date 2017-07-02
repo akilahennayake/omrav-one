@@ -14,7 +14,9 @@ class CreateOmraPackageratingsTable extends Migration
     public function up()
     {
         Schema::create('omra_packageratings', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('pkgrt_id')->unsigned();
+            $table->integer('pkgrt_totalnumberofstars')->unsigned();
+            $table->string('pkgrt_packagestarname');
             $table->timestamps();
         });
     }
