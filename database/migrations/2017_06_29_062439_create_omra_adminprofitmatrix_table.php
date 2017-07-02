@@ -13,7 +13,7 @@ class CreateOmraAdminprofitmatrixTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_adminprofitmatrix', function (Blueprint $table) {
+        Schema::create('omra_adminprofitsetups', function (Blueprint $table) {
             $table->increments('prof_id')->unsigned();
             $table->string('prof_entityname')->nullable();
             $table->double('prof_globalprofitamount')->nullable();

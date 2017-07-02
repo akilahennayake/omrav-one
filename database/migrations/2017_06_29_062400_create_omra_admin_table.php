@@ -13,7 +13,7 @@ class CreateOmraAdminTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_admin', function (Blueprint $table) {
+        Schema::create('omra_admins', function (Blueprint $table) {
             $table->increments('admin_id')->unsigned();
             $table->string('admin_fname',50)->nullable();
             $table->string('admin_lname',50)->nullable();

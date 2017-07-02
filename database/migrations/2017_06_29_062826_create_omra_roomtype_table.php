@@ -13,18 +13,18 @@ class CreateOmraRoomtypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_roomtype', function (Blueprint $table) {
+        Schema::create('omra_roomtypes', function (Blueprint $table) {
             $table->increments('rmt_id')->unsigned();
             $table->integer('hotel_id')->unsigned()->nullable();
-            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
             $table->string('rmt_name',100)->nullable();
             $table->integer('rmt_numberofrooms')->nullable();
             $table->integer('rmt_roomsize')->nullable();
             $table->integer('bedtype_id')->unsigned()->nullable();
-            $table->foreign('bedtype_id')->references('bdt_id')->on('omra_bedtype');
+            $table->foreign('bedtype_id')->references('bdt_id')->on('omra_bedtypes');
             $table->integer('rmt_maxoccupancy')->nullable();
             $table->integer('roomtypename_id')->nullable()->unsigned();
-            $table->foreign('roomtypename_id')->references('rmtn_id')->on('omra_roomtypename');
+            $table->foreign('roomtypename_id')->references('rmtn_id')->on('omra_roomtypenames');
             $table->boolean('rmt_availability')->default(true);
             $table->boolean('rmt_smokingallowed')->default(false);
             $table->boolean('rmt_childrenallowed')->default(true);

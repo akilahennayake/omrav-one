@@ -16,11 +16,11 @@ class CreateOmraPaymentsTable extends Migration
         Schema::create('omra_payments', function (Blueprint $table) {
             $table->increments('py_paymentid')->unsigned();
             $table->integer('visitor_id')->unsigned()->nullable();
-            $table->foreign('visitor_id')->references('v_id')->on('omra_visitor');
+            $table->foreign('visitor_id')->references('v_id')->on('omra_visitors');
             $table->integer('package_id')->unsigned()->nullable();
-            $table->foreign('package_id')->references('pkg_id')->on('omra_package');
+            $table->foreign('package_id')->references('pkg_id')->on('omra_packages');
             $table->integer('travelagency_id')->unsigned()->nullable();
-            $table->foreign('travelagency_id')->references('t_id')->on('omra_travelagency');
+            $table->foreign('travelagency_id')->references('t_id')->on('omra_travelagencies');
             $table->double('py_paymentamount')->nullable();
             $table->boolean('py_paymentstatus')->default(false);
             $table->date('py_paymentdate')->nullable();

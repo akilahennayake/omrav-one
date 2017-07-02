@@ -13,7 +13,7 @@ class CreateOmraBookingwindowTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_bookingwindow', function (Blueprint $table) {
+        Schema::create('omra_bookingwindows', function (Blueprint $table) {
             $table->increments('bkw_bookingwindowid')->unsigned();
             $table->integer('bkw_bookingwindowdays')->nullable();
             $table->timestamps();

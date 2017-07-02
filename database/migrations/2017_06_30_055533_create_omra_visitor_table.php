@@ -13,7 +13,7 @@ class CreateOmraVisitorTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_visitor', function (Blueprint $table) {
+        Schema::create('omra_visitors', function (Blueprint $table) {
             $table->increments('v_id')->index()->unsigned();
             $table->string('v_email')->unique();
             $table->string('v_fname',50)->nullable();
@@ -25,11 +25,12 @@ class CreateOmraVisitorTable extends Migration
             $table->string('v_profilephotopath')->nullable();
             $table->string('password');
             $table->integer('nationality_id')->unsigned();
-            $table->foreign('nationality_id')->references('n_id')->on('omra_nationality');
+            $table->foreign('nationality_id')->references('n_id')->on('omra_nationalities');
             $table->integer('gender_id')->unsigned()->nullable();
-            $table->foreign('gender_id')->references('g_id')->on('omra_gender');
+            $table->foreign('gender_id')->references('g_id')->on('omra_genders');
             $table->integer('country_id')->unsigned();
-            $table->foreign('country_id')->references('c_id')->on('omra_country');
+            $table->foreign('country_id')->references('c_id')->on('omra_countries');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

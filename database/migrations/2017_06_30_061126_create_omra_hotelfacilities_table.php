@@ -16,7 +16,7 @@ class CreateOmraHotelfacilitiesTable extends Migration
         Schema::create('omra_hotelfacilities', function (Blueprint $table) {
             $table->increments('hf_id')->unsigned();
             $table->integer('hotel_id')->unsigned()->nullable();
-            $table->foreign('hotel_id')->references('h_id')->on('omra_hotel');
+            $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
             $table->integer('hf_totalnumberofrooms')->nullable();
             $table->boolean('hf_swimmingpool')->default(false)->nullable();
             $table->boolean('hf_freeparking')->default(false)->nullable();

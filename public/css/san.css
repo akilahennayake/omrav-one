@@ -1,0 +1,136 @@
+.header__main {
+	padding: 10px 0 !important;
+	background-image:url('../img/patterns/header_pattern_3.png');
+	background-size:contain;
+}
+ul.sign {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+.sign li {
+	list-style: none;
+	background: #f44336;
+	padding: 3px 10px;
+	color:#ffffff;
+	text-align:center;
+}
+.sign li a {
+	color:#ffffff;
+	font-size:14px;
+}
+.footernav li {
+	list-style: none;
+	padding: 3px 3px;
+	color:#828282;
+	float:right;
+	text-align:center;
+	line-height: 1.42857143;
+}
+.footernav li a {
+	color:#828282;
+	font-size:13px;
+	margin-right: 0px !important;
+}
+.footernav li a:hover {
+	color:#000000;
+	border-bottom: 2px solid #F44336;
+}
+.topheader {
+	text-align:center;
+}
+.sidebar {
+	width:100%;
+	float:left;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	padding:4%;
+	background:#ffffff;
+	color:#000;
+}
+.sidebar-top {
+	width:100%;
+	float:left;
+	font-weight:bold;
+	padding-left: 100px;
+}
+.hotel {
+	width:100%;
+	float:left;
+	margin-top:10px;
+	margin-bottom:5px;
+}
+.filter {
+    right: 11px;
+    position: absolute;
+    top: -22px;
+}
+
+.bx-n {
+	box-shadow: none !important;
+	cursor: pointer;
+}
+ ul.dropdown-menu.dpm {
+   left: -104px !important;
+   top:20px !important;
+
+}
+section {     padding: 30px 0 30px !important; }
+
+span.pc {
+    background: #f44336;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    color: #ffffff !important;
+}
+.omra-package {position:relative;border-top: 10px solid #f3f3f3 !important;    }
+.inner-title {
+	    margin-bottom: 0px !important;
+}
+.pcf {     top: 35px !important;
+    left: 13px !important;}
+
+@media (max-width: 768px) {
+
+ .logo__text {
+    text-align: center !important;
+    width: 100%; margin-top:20px;
+}
+.copy{ text-align:center;}
+ul.footernav {
+    padding: 0px;
+    margin: 0px;
+    display:inline-block;
+}
+.footer__bottom {
+    padding: 15px 0px !important;
+}
+.footer__bottom a {
+    font-size: 10px !important;
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 880px) {
+.footernav li a {
+
+    font-size: 11px !important;
+}
+.copy {
+    font-size: 11px !important;
+}
+}
+ .inner-title>h2>small{min-height:30px;}
+
+.nopadding{ padding:0px !important;}
+.footer__bottom {
+    text-align: left !important; padding: 15px 0px !important;
+}
+.bt {
+    text-align: center !important;
+    width: 100% !important;
+    float: left !important; 
+}
+.route-list a{float:left; width:100%; color:#000000;}
+-------------------------------------------------------------------------------------------------------------
+

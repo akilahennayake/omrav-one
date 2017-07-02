@@ -13,7 +13,7 @@ class CreateOmraRoomtypenameTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_roomtypename', function (Blueprint $table) {
+        Schema::create('omra_roomtypenames', function (Blueprint $table) {
             $table->increments('rmtn_id')->unsigned();
             $table->string('rmtn_roomtypename');
             $table->timestamps();

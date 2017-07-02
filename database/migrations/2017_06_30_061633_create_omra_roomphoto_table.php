@@ -13,11 +13,11 @@ class CreateOmraRoomphotoTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_roomphoto', function (Blueprint $table) {
+        Schema::create('omra_roomphotos', function (Blueprint $table) {
             $table->increments('rmph_id')->unsigned();
             $table->string('rmph_path')->nullable();
             $table->integer('roomtype_id')->nullable()->unsigned();
-            $table->foreign('roomtype_id')->references('rmt_id')->on('omra_roomtype');
+            $table->foreign('roomtype_id')->references('rmt_id')->on('omra_roomtypes');
             $table->timestamps();
         });
     }

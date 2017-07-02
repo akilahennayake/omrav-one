@@ -13,7 +13,7 @@ class CreateOmraRouteTable extends Migration
      */
     public function up()
     {
-        Schema::create('omra_route', function (Blueprint $table) {
+        Schema::create('omra_routes', function (Blueprint $table) {
             $table->increments('rt_id')->unsigned();
             $table->string('rt_routename');
             $table->timestamps();
