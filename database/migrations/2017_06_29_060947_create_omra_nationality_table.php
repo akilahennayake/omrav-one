@@ -14,9 +14,7 @@ class CreateOmraNationalityTable extends Migration
     public function up()
     {
         Schema::create('omra_nationalities', function (Blueprint $table) {
-            $table->increments('n_id')->unsigned();
-            $table->string('n_nationality',50);
-            $table->timestamps();
+
         });
     }
 

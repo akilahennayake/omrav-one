@@ -14,9 +14,7 @@ class CreateOmraGenderTable extends Migration
     public function up()
     {
         Schema::create('omra_genders', function (Blueprint $table) {
-            $table->increments('g_id')->unsigned();
-            $table->string('g_gender',7);
-            $table->timestamps();
+
         });
     }
 

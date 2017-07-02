@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOmraRoleTable extends Migration
+class CreateOmraRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,9 @@ class CreateOmraRoleTable extends Migration
     public function up()
     {
         Schema::create('omra_roles', function (Blueprint $table) {
-
+            $table->increments('r_id')->unsigned();
+            $table->string('r_role',30);
+            $table->timestamps();
         });
     }
 
@@ -25,6 +27,6 @@ class CreateOmraRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('omra_role');
+        Schema::dropIfExists('omra_roles');
     }
 }
