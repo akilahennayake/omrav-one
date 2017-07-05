@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="vendors/bower_components/slick-carousel/slick/slick.css">
     <!-- NoUiSlider - Input Slider -->
     <link rel="stylesheet" href="vendors/bower_components/nouislider/distribute/nouislider.min.css">
+<!-- Light Gallery -->
+<link rel="stylesheet" href="vendors/bower_components/lightgallery/dist/css/lightgallery.min.css">
+<!-- rateYo - Ratings -->
+<link rel="stylesheet" href="vendors/bower_components/rateYo/src/jquery.rateyo.css">
     <!-- Ion Range Slider - Input Slider -->
     <link rel="stylesheet" href="vendors/bower_components/ionrangeslider/ion.rangeSlider.css" />
     <link rel="stylesheet" href="vendors/bower_components/ionrangeslider/ion.rangeSlider.skinNice.css" />
