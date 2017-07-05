@@ -30,4 +30,8 @@ Route::get('/login','FrontendController@getLogin');
 Route::get('/hotels','FrontendController@getHotels');
 //travel agents list route
 Route::get('/travelagents','FrontendController@getTravelAgents');
+//travel agent details route
+Route::get('/travelagentdetails','FrontendController@getTravelAgentDetails');
+//Hotel details route
+Route::get('/hoteldetails','FrontendController@getHotelDetails');
 
