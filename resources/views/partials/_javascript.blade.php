@@ -67,3 +67,5 @@
 <script src="js/custom.js"></script>
 <!-- Demo only -->
 <script src="js/demo/demo.js"></script>
+<!--Parsley.js load-->
+{!! \Collective\Html\HtmlFacade::script('js/parsley.min.js') !!}
