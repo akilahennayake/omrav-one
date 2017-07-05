@@ -10,13 +10,17 @@ class FrontendController extends Controller
     public function getLogin(){
 
         return view('frontend.login');
-
 }
 
     //landing page controller
     public function getIndex(){
 
         return view ('frontend.landing');
+    }
+
+    //Contact us page controller
+    public function getContact(){
+        return view('frontend.contact');
     }
 
     //hotels list page controller
@@ -40,9 +44,8 @@ class FrontendController extends Controller
         return view('frontend.hoteldetails');
     }
 
-    //results page controller
-
-
-
-
+    //results page controller should be dynamic
+    public function getResults(){
+        return view('frontend.results');
+    }
 }
