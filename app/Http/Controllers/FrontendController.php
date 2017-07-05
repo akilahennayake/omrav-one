@@ -14,7 +14,7 @@ class FrontendController extends Controller
 }
 
     //landing page controller
-    public function getLanding(){
+    public function getIndex(){
 
         return view ('frontend.landing');
     }

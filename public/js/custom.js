@@ -1,4 +1,7 @@
-$(document).ready(function () { 
+$(document).ready(function () {
+$('.hand').click(function(){
+    $(this).find('.pl i').toggleClass('fa-caret-down fa-caret-up')
+}); 
 $( "#dpd1,#dpd2" ).focus(function() {
 	frm=document.psearch;								  
   if(frm.nationality.value=="0")

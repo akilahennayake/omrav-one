@@ -361,3 +361,7 @@ span.star{color:#ffffff; font-size:20px;}
 }
 ul.sign li a:hover{color:#000000 !important;}
 .form-group--light .form-group__bar:after, .form-group--light .form-group__bar:before{background-color: #bb0a0a !important;}
+.tbl table thead tr th {
+text-align: center;
+}
+.hand{cursor: pointer;  padding-bottom:0px !important;}
