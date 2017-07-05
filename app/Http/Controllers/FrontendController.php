@@ -19,6 +19,11 @@ class FrontendController extends Controller
         return view ('frontend.landing');
     }
 
+    //hotels list page controller
+    public function getHotels(){
+        return view('frontend.hotels');
+    }
+
 
     //results page controller
 
