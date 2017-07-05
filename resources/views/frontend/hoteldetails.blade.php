@@ -248,4 +248,3 @@
                 </div>
             </section>
         @endsection
-      
