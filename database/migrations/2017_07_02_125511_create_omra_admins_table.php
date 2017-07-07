@@ -17,11 +17,12 @@ class CreateOmraAdminsTable extends Migration
             $table->increments('admin_id')->unsigned();
             $table->string('admin_fname',50)->nullable();
             $table->string('admin_lname',50)->nullable();
-            $table->string('admin_email',100);
+            $table->string('admin_email',100)->unique();
             $table->string('admin_password');
             $table->integer('admin_mobile')->nullable();
             $table->string('admin_photopath')->nullable();
             $table->timestamps();
+
         });
     }
 

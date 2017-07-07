@@ -46,3 +46,10 @@ Route::get('/hoteldetails','FrontendController@getHotelDetails');
 //Results route
 //just to check, should be dynamic
 Route::get('/results','FrontendController@getResults');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin','AdminController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

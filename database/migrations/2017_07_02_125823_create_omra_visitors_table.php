@@ -32,6 +32,7 @@ class CreateOmraVisitorsTable extends Migration
             $table->foreign('country_id')->references('c_id')->on('omra_countries');
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 

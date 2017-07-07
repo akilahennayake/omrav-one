@@ -29,5 +29,7 @@
     <link rel="stylesheet" href="css/datepicker.css">
     <link rel="stylesheet" href="css/app_1.min.css">
     <link rel="stylesheet" href="css/app_2.min.css">
+    <link rel="stylesheet" href="css/app.css">
     <!--Parsley.css load-->
     {!! \Collective\Html\HtmlFacade::style('css/parsley.css') !!}
+{!! \Collective\Html\HtmlFacade::style('css/app.css') !!}

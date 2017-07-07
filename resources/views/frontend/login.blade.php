@@ -1,10 +1,8 @@
 @extends('main')
 @section('title','login')
 @section('content')
-    <section class="section">
-        <div class="container">
-
-
+<section class="section">
+    <div class="container">
         <div id="login-overlay " class="modal-dialog">
             <div class="card">
                 <div class="modal-header">
@@ -15,30 +13,68 @@
                     <div class="row">
                         <div class="col-12-12 p-30">
                             <div class="well">
-                                <form id="loginForm" method="POST" novalidate="novalidate">
-                                    <div class="form-group">
-                                        <label for="username" class="control-label">Username</label>
-                                        <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
-                                        <span class="help-block"></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password" class="control-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password" placeholder="********">
-                                        <span class="help-block"></span>
-                                    </div>
-                                    <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
 
-                                    <button type="submit" class="btn btn-danger btn-block">Login</button>
+                                <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                                    {{ csrf_field() }}
 
-                                    </form>
-                                </div>
+                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                                        <div class="col-md-6">
+                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                            @if ($errors->has('email'))
+                                                <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                        <label for="password" class="col-md-4 control-label">Password</label>
+
+                                        <div class="col-md-6">
+                                            <input id="password" type="password" class="form-control" name="password" required>
+
+                                            @if ($errors->has('password'))
+                                                <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-4">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8 col-md-offset-4">
+                                            <button type="submit" class="btn btn-primary">
+                                                Login
+                                            </button>
+
+                                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                Forgot Your Password?
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     @endsection

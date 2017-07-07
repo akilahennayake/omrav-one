@@ -187,4 +187,5 @@ console.log($this.parent().find('#mad-'+pclass).html(value));
 console.log($this.parent().find('#mak-'+pclass).html(10 - value));
     console.log("Value: " + value);
 });*/
+$(".scrollbar-inner")[0]&&$(".scrollbar-inner").scrollbar().scrollLock()
 });

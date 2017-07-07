@@ -8,11 +8,13 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="bt">
                         <ul class="footernav">
-                            <li> <a href="contact.html">Contact Us</a> </li>
-                            <li> <a href="">About</a> </li>
-                            <li> <a href="">Language</a> </li>
-                            <li> <a href="">Privacy Policy</a> </li>
-                            <li> <a href="">Refund Policy</a> </li>
+                            <li class="{{Request::is('/contact')?"active":""}}">
+                                <a href="/contact">Contact Us</a>
+                            </li>
+                            <li> <a href="#">About</a> </li>
+                            <li> <a href="#">Language</a> </li>
+                            <li> <a href="#">Privacy Policy</a> </li>
+                            <li> <a href="#">Refund Policy</a> </li>
                         </ul>
                     </div>
                 </div>
