@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('partials._head')
-    @include('partials._topnav')
+
+    @include('partials._adminhead')
+
+
 </head>
 <body>
-@yield('content')
 
-@include('partials._footer')
-@include('partials._javascript')
+    @include('partials._adminnavtop')
+    @include('partials._adminhotelnavside')
+
+    @yield('adminhotelcontent')
+
+
+    @include('partials._footer')
+    @include('partials._adminjs')
+
 </body>
 </html>
 

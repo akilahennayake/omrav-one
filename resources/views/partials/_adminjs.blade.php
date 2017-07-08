@@ -1,5 +1,3 @@
-
-<!-- /#wrapper -->
 <!-- jQuery -->
 <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
