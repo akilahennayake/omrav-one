@@ -83,6 +83,47 @@
     });
 
 </script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        $("#dpd1,#dpd2").datepicker({autoclose: true,format: 'dd/mm/yyyy'});
+
+//Pie Chart End
+
+//Point Chart Start
+        var data2 = [
+            [0, 249], [1, 250], [2, 200], [3, 210], [4, 205], [5, 220], [6, 240], [7, 250],
+            [8, 260], [9, 280], [10, 260], [11, 240], [12, 220], [13, 230], [14, 260], [15, 280], [16, 300]
+        ];
+
+        var dataset1 = [
+            { label: "Double", data: data2 }
+        ];
+
+        var options1 = {
+            series: {
+                lines: {
+                    show: false,
+                    fill: false,
+                    fillColor: { colors: [{ opacity: 0.7 }, { opacity: 0.1}] }
+                },
+                points: {
+                    radius: 3,
+                    fill: true,
+                    fillColor: '#F44336',
+                    show: true
+                }
+            },
+            colors: ["#F44336"]
+        };
+        $.plot($("#flot-placeholder"), dataset1, options1);
+        window.onresize = function(event) {
+            $.plot($("#flot-placeholder"), dataset1, options1);
+        }
+
+//Point Chart End
+    });
+</script>
 <!-- IE9 Placeholder -->
 <!--[if IE 9 ]>
 <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
