@@ -46,6 +46,8 @@ Route::get('/hoteldetails','FrontendController@getHotelDetails');
 //Results route
 //just to check, should be dynamic
 Route::get('/results','FrontendController@getResults');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -53,3 +55,24 @@ Route::get('/admin','AdminController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//hotel test routes
+//hotel 1
+Route::get('/hotel1',function(){
+    return view('backend.hotel1');
+});
+//hotel 2
+Route::get('/hotel2',function(){
+    return view('backend.hotel2');
+});
+
+//Travel agents est routes
+// TA1
+Route::get('/travelagent1',function(){
+    return view('backend.travelagent1');
+});
+//TA2
+Route::get('/travelagent2',function(){
+    return view('backend.travelagent2');
+});
