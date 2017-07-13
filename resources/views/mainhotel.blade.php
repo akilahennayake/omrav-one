@@ -14,7 +14,7 @@
     @yield('adminhotelcontent')
 
 
-    @include('partials._footer')
+    @include('partials._adminfooter')
     @include('partials._adminjs')
 
 </body>

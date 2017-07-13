@@ -15,7 +15,7 @@
     @yield('admintacontent')
 
     @include('partials._adminrightpanel')
-    @include('partials._footer')
+    @include('partials._adminfooter')
     @include('partials._adminjs')
 
 </body>

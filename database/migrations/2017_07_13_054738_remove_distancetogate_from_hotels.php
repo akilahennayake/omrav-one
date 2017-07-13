@@ -16,7 +16,7 @@ class RemoveDistancetogateFromHotels extends Migration
         Schema::table('omra_hotels', function (Blueprint $table) {
             //
             $table->dropColumn('h_nearestgatename');
-            $table->integer('nearestgate_id')->unsigned();
+            $table->integer('nearestgate_id')->unsigned()->nullable();
             $table->foreign('nearestgate_id')->references('gate_id')->on('omra_gates');
         });
     }
@@ -30,7 +30,8 @@ class RemoveDistancetogateFromHotels extends Migration
     {
         Schema::table('omra_hotels', function (Blueprint $table) {
             //
-            $table->string('h_nearestgatename',80)->nullable();
+            $table->string('h_nearestgatename',80);
+            $table->dropColumn('nearestgate_id');
         });
     }
 }

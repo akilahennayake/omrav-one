@@ -1,7 +1,8 @@
 </div>
 
 <footer id="footer">
-    <div class="footer__bottom">
+    <div class="footer__bottom" >
+    {{--style="text-align: right"--}}
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-3">
