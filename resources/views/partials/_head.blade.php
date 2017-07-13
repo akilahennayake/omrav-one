@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>omrabooking.com | @yield('title')</title>
     <!-- Vendors -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Material design colors -->
     <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
     <!-- CSS animations -->

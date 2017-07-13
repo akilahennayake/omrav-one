@@ -6,7 +6,6 @@
         <div id="login-overlay " class="modal-dialog">
             <div class="card">
                 <div class="modal-header">
-
                     <h2 class="modal-title text-center" id="myModalLabel">  <i class="fa fa-user fa-fw"></i> Login </h2>
                 </div>
                 <div class="modal-body ">
