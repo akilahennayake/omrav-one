@@ -24,6 +24,7 @@ class CreateOmraHotelemployeesTable extends Migration
             $table->boolean('isactive')->default(false);
             $table->integer('hotel_id')->unsigned()->nullable();
             $table->foreign('hotel_id')->references('h_id')->on('omra_hotels');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

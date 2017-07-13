@@ -24,6 +24,7 @@ class CreateOmraTravelagencyemployeesTable extends Migration
             $table->boolean('te_isactive')->default(false);
             $table->integer('travelagency_id')->unsigned();
             $table->foreign('travelagency_id')->references('t_id')->on('omra_travelagencies');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

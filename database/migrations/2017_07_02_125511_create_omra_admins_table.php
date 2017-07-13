@@ -21,6 +21,7 @@ class CreateOmraAdminsTable extends Migration
             $table->string('admin_password');
             $table->integer('admin_mobile')->nullable();
             $table->string('admin_photopath')->nullable();
+            $table->rememberToken();
             $table->timestamps();
 
         });

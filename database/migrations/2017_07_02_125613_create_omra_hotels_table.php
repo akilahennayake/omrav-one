@@ -35,6 +35,7 @@ class CreateOmraHotelsTable extends Migration
             $table->foreign('starrating_id')->references('st_id')->on('omra_starratings');
 //            $table->integer('promotion_id')->unsigned();
 //            $table->foreign('promotion_id')->references('pr_id')->on('omra_promotion');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
