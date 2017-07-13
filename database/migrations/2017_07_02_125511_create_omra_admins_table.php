@@ -15,12 +15,12 @@ class CreateOmraAdminsTable extends Migration
     {
         Schema::create('omra_admins', function (Blueprint $table) {
             $table->increments('admin_id')->unsigned();
-            $table->string('admin_fname',50)->nullable();
-            $table->string('admin_lname',50)->nullable();
-            $table->string('admin_email',100)->unique();
-            $table->string('admin_password');
-            $table->integer('admin_mobile')->nullable();
-            $table->string('admin_photopath')->nullable();
+            $table->string('fname',50)->nullable();
+            $table->string('lname',50)->nullable();
+            $table->string('email',100)->unique();
+            $table->string('password');
+            $table->integer('mobile')->nullable();
+            $table->string('photopath')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

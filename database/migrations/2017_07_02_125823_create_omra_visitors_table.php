@@ -15,7 +15,7 @@ class CreateOmraVisitorsTable extends Migration
     {
         Schema::create('omra_visitors', function (Blueprint $table) {
             $table->increments('v_id')->index()->unsigned();
-            $table->string('v_email')->unique();
+            $table->string('email')->unique();
             $table->string('v_fname',50)->nullable();
             $table->string('v-lname',50)->nullable();
             $table->date('v_dob')->nullable();
