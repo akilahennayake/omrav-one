@@ -15,7 +15,7 @@ class omra_travelagency extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        't_countryregistrationnumber', 't_name','t_telephone','t_faxnumber','','password', 'email','mobile','photopath'
+        't_countryregistrationnumber','t_name','t_telephone','t_faxnumber','email','t_ownerpassportnumber','t_owneridphotopath','t_building','t_logophotopath','country_id','role_id','t_isactive','t_city'
     ];
 
     /**
@@ -24,6 +24,6 @@ class omra_travelagency extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'admin_password', 'remember_token',
+        'password', 'remember_token',
     ];
 }

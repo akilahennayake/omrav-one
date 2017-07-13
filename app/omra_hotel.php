@@ -15,7 +15,7 @@ class omra_hotel extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fname', 'lname','password', 'email','mobile','photopath'
+        'h_hotelname', 'h_registerednumberincountry','h_telephone','email','h_distancetoharam','h_hotellogophotopath','h_faxnumber','role_id','h_isactive','city_id','starrating_id','nearestgate_id'
     ];
 
     /**
@@ -24,6 +24,6 @@ class omra_hotel extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'admin_password', 'remember_token',
+        'password', 'remember_token',
     ];
 }

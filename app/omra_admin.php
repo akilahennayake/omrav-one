@@ -15,7 +15,7 @@ class omra_admin extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'admin_fname', 'admin_lname','admin_password', 'admin_email','admin_mobile','admin_photopath'
+        'fname', 'lname','email','mobile','photopath'
     ];
 
     /**
@@ -24,6 +24,6 @@ class omra_admin extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'admin_password', 'remember_token',
+        'password', 'remember_token',
     ];
 }
