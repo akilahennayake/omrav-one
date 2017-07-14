@@ -1,6 +1,23 @@
 <header id="header">
     <div class="header__main">
         <div class="container">
+            {{--<ul class="nav navbar-nav navbar-left">--}}
+                {{--<li><a href="#">Link</a></li>--}}
+                {{--@if(Auth::check())--}}
+                    {{--<li class="dropdown-menu-right">--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{Auth::user()->name}} <span class="caret"></span></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="{{route('posts.index')}}">Posts</a></li>--}}
+                            {{--<li><a href="{{route('categories.index')}}">Categories</a></li>--}}
+                            {{--<li><a href="#">Something else here</a></li>--}}
+                            {{--<li role="separator" class="divider"></li>--}}
+                            {{--<li><a href="{{route('logout')}}">Log Out</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                {{--@else--}}
+                    {{--<a href="{{route('login')}}">Login</a>--}}
+                {{--@endif--}}
+            {{--</ul>--}}
             <ul class="sign">
                 <li class="{{Request::is('/login')?"active":""}}"> <a href="/login"><img src="img/icons/login.png" alt=""> Sign In</a> </li>
             </ul>

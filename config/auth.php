@@ -53,6 +53,22 @@ return [
             'driver' => 'token',
             'provider' => 'admins',
         ],
+        'travelagency' => [
+            'driver' => 'session',
+            'provider' => 'travelagencies',
+        ],
+        'travelagencyemployee' => [
+            'driver' => 'session',
+            'provider' => 'travelagencyemployees',
+        ],
+        'hotel' => [
+            'driver' => 'session',
+            'provider' => 'hotels',
+        ],
+        'hotelemployee' => [
+            'driver' => 'session',
+            'provider' => 'hotelemployees',
+        ],
     ],
 
     /*
@@ -80,6 +96,22 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\omra_admin::class,
+        ],
+        'hotels' => [
+            'driver' => 'eloquent',
+            'model' => App\omra_hotel::class,
+        ],
+        'hotelemployees' => [
+            'driver' => 'eloquent',
+            'model' => App\omra_hotelemployee::class,
+        ],
+        'travelagencies' => [
+            'driver' => 'eloquent',
+            'model' => App\omra_travelagency::class,
+        ],
+        'travelagencyemployees' => [
+            'driver' => 'eloquent',
+            'model' => App\omra_travelagencyemployee::class,
         ],
 
         // 'users' => [
@@ -113,6 +145,26 @@ return [
             'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 15,
+        ],
+        'hotels' => [
+            'provider' => 'hotels',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'hotelemployees' => [
+            'provider' => 'hotelemployees',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'travelagencies' => [
+            'provider' => 'travelagencies',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'travelagencyemployees' => [
+            'provider' => 'travelagencyemployees',
+            'table' => 'password_resets',
+            'expire' => 60,
         ],
     ],
 

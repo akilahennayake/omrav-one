@@ -40,12 +40,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index');
-Auth::routes();
+Route::get('/hotel','HotelController@index');
+Route::get('/travelagency','TravelAgencyController@index');
+Route::get('/hotelemp','HotelEmpController@index');
+Route::get('/travelemp','TravelEmpController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('auth/logout','Auth\LoginController@logout')->name('logout');
+
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
-//hotel test routes
+////////////////////////////////////////////////////////////////////
+///////////////////BACKEND TEST ROUTES//////////////////////////////
+////////////////////////////////////////////////////////////////////
 //hotel 1
 Route::get('/hotel1',function(){
     return view('backend.hotel1');
@@ -55,7 +65,6 @@ Route::get('/hotel2',function(){
     return view('backend.hotel2');
 });
 
-//Travel agents est routes
 // TA1
 Route::get('/travelagent1',function(){
     return view('backend.travelagent1');

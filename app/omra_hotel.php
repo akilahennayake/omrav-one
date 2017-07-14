@@ -7,8 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class omra_hotel extends Authenticatable
 {
+
     use Notifiable;
-    protected $guard = 'admin';
+    protected $guard = 'hotel';
     /**
      * The attributes that are mass assignable.
      *
